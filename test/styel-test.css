@@ -1,10 +1,64 @@
+
 body{
-    max-width: 1250px; 
-    margin: 30px 140px 0px 140px;
+    margin: 0%;
 }
+
 header{
-    background-color: #f5f2f2;
+    
 }
+
+header::before{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url(img/devushka_trava_gorod_213102_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    margin: 0%;
+}
+.continer{ 
+    max-width: 1250px;
+    margin: 0px auto;
+    margin-top: 0%;
+}
+
+@media all and (max-width:1250px){
+    .continer{
+        max-width: 1024px;
+    }
+    header::before{
+        background-image: url(img/devushka_trava_gorod_213102_1024x600.jpg);
+        max-height: 100%;
+    }
+}
+
+@media all and (max-width:1020px) {
+    .continer{
+        max-width: 720px;
+
+    }
+    header::before{
+        background-image: url(img/devushka_trava_gorod_213102_720x1280.jpg);
+        max-height: 1280px;
+    }
+}
+@media all and (max-width:720px){
+    .continer{
+        max-width: none;
+    }
+    header::before{
+        background-image: url(img/devushka_trava_gorod_213102_480x854.jpg);
+        max-height: 100%;
+    }   
+}
+
+
+
+
 @font-face {
     font-family: opensans;
     font-weight: bold;
@@ -35,8 +89,9 @@ header{
     src: url(fonts/OpenSans-Italic.ttf);
 }
 .mine-menu{
+    
     background-color: #313030;
-    height: 90px;   
+    max-height: 90px;   
 }
  .mine-menu ul {
     text-align: center;
@@ -80,7 +135,7 @@ header{
 .title p{
     font-family: opensansRegular;
     font-weight: boldRegular;
-    color: #989696;
+    color: black;
     margin: 30px 0px 55px 0px;
     font-size: 15px;
     
@@ -92,6 +147,7 @@ header{
     
 }
 .Contact-Us{ 
+    cursor: pointer;
     background: #dc3131;
     color: white;
     font-family: opensans;
@@ -99,15 +155,13 @@ header{
     font-size: 18px;
     border: 0;
     border-radius: 5px;
-    width: 227px;
-    height: 55px;   
+    min-width: 227px;
+    min-height: 55px;   
 }
 
 .video{
     float: right;
     border: none;
-    background-color: #313030;
-    box-shadow: -6px -6px 10px 10px #d0cdcd; 
     margin-top: 105px;
 }
 
@@ -148,6 +202,7 @@ header{
 }
 
 .Learn-More{
+    cursor: pointer;
     background-color: white;
     width: 220px;
     height: 50px;
@@ -420,10 +475,24 @@ header{
 
 .Design-tips{
     margin-top: 110px;
-    background-image: url(img/siluet_noch_zvezdnoe_nebo_137292_1280x720.jpg);
+    
     background-position: center;
     width: 100%;
     height: 512px;
+}
+
+.Design-tips::before{
+    content: '';
+    display: block;
+    height: 512px;
+    width: 100%;
+    background-image: url(img/devushka_zontik_anime_141156_2048x1152.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    margin: 0%;
 }
 
 .text-Design-tips{
@@ -440,7 +509,7 @@ header{
 }
 
 .text-Design-tips span{
-    font-family: opansans;
+    font-family: opensans;
     font-weight: bold;
     font-size: 42px;
     line-height: 24px;
@@ -468,6 +537,7 @@ header{
 }
 
 .subscribe{
+    cursor: pointer;
     vertical-align: top;
     padding: 0%;
     width: 212px;
@@ -482,4 +552,196 @@ header{
     font-weight: bold;
     background-color: #dc3131;
     
+}
+
+.get-in-touch{
+    margin-top: 105px;
+    
+}
+
+.get-in-touch h5{
+    font-family: opensans;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0%;
+    margin-bottom: 46px;
+    text-transform: uppercase;
+    color: #585858;
+}
+
+.get-in-touch p{
+    font-family: opensansRegular;
+    font-size: 16px;
+    margin-bottom: 55px;
+    color: #585858;
+}
+
+.submit-form{
+    margin-top: 70px;
+    display: inline-block;
+}
+
+.name{
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 10px;
+    width: 307px;
+    height: 68px;
+    font-family: opensansRegular;
+    font-size: 18px;
+    color: #6f6f6f;
+    padding-left: 35px;
+}
+
+.mail{
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 10px;
+    width: 307px;
+    height: 68px;
+    margin-left: 42px;
+    font-family: opensansRegular;
+    font-size: 18px;
+    color: #6f6f6f;
+    padding-left: 35px;
+}
+
+.message{
+    margin-top: 46px;    
+    resize: none;
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 10px;
+    width: 682px;
+    height: 211px;
+    font-family: opensansRegular;
+    font-size: 16px;
+    color: #6f6f6f;
+    padding-left: 48px;
+    padding-top: 35px;
+}
+
+.submit{
+    cursor: pointer;
+    margin-top: 45px;
+    padding: 0%;
+    width: 730px;
+    height: 72px;
+    background-color: #dc3131;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: opensans;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.list-info{
+    
+    color: white;
+    display: inline-block;
+    height: 480px;
+    vertical-align: top;
+    margin-top: 75px;
+    margin-left: 100px;
+    width: 411px;
+    height: 480px;
+}
+
+.list-info::before{
+    content: '';
+    display: block;
+    height: 480px;
+    width: 100%;
+    background: #313131;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.list-info ul{
+    padding: 0%;
+    
+    margin-top: 140px;
+    
+}
+
+.list-info ul li {
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 58px;
+    
+}
+
+.list-info ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: opensansRegular;
+
+}
+
+.list-info p{
+    
+    font-family: opensansRegular;
+    font-size: 15px;
+}
+
+.list-info span{
+    font-family: opensans;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+.basement{
+    
+    margin-top: 110px;
+    
+}
+
+.basement::before{
+    content: '';
+    display: block;
+    height: 110px;
+    width: 100%;
+    background: #343333;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+}
+
+.basement__text{
+    display: inline-block;
+    line-height: 110px;
+    margin: 0%;
+    color: #838383;
+    font-family: opensansRegular;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+
+
+.basement__list{
+    margin: 0%;
+    float: right;
+    padding: 0%;
+    height: 110px;
+}
+
+.basement__list li{
+    list-style-type: none;
+    display: inline-block; 
+    margin: 0%; 
+    margin-top: 40px;
+    padding-right: 20px;
+}
+
+.basement__list li img{
+    margin: 0%;
+
 }
